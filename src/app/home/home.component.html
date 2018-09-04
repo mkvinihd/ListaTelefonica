@@ -1,0 +1,56 @@
+
+<section>
+<div class="container">
+	<div class="row">
+		<div class="col"></div>
+		<div class="col-4" id="espaco_h1">
+			<h1>Lista Telefonica</h1>
+			<span>Salve seus contatos online.</span><br />
+			
+			<!-- Button trigger modal -->
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+			  Iniciar
+			</button>
+
+			<!-- Modal -->
+			<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			  <div class="modal-dialog modal-dialog-centered" role="document">
+			    <div class="modal-content">
+			      <div class="modal-header">
+			        <h5 class="modal-title" id="exampleModalCenterTitle">Salvar Novo Contato</h5>
+			        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			          <span aria-hidden="true">&times;</span>
+			        </button>
+			      </div>
+			      <div class="modal-body">
+			        <!-- FORMULARIO -->
+			        <form class="form-material" [formGroup]="formulario" (ngSubmit)="onSubmit()">
+					  <mat-form-field class="input-material">
+					    <input matInput placeholder="Nome" formControlName="nome">
+					  </mat-form-field>
+
+					  <mat-form-field class="input-material">
+					    <input matInput placeholder="Telefone" formControlName="telefone">
+					  </mat-form-field>
+
+					  <mat-form-field class="input-material">
+					    <textarea matInput placeholder="Descricao" formControlName="desc"></textarea>
+					  </mat-form-field>
+
+					  <button type="submit" class="btn btn-primary" style="margin: 10px;">Salvar</button>
+					  <button type="reset" class="btn btn-secondary">Cancelar</button>
+					</form>
+			        <!-- FIM FORMULARIO -->
+			      </div>
+			      <div class="modal-footer">
+			        
+			        
+			      </div>
+			    </div>
+			  </div>
+			</div>
+		</div>
+		<div class="col"></div>
+	</div>
+</div>	
+</section>
