@@ -12,7 +12,6 @@ import {FormBuilder} from '@angular/forms';
 export class HomeComponent implements OnInit {
 
 	formulario: FormGroup;
-  contato: string[] = [];
 
   constructor(
     private formBuilder: FormBuilder) { }
@@ -27,8 +26,11 @@ export class HomeComponent implements OnInit {
   }
 
   onSubmit(){
-	 this.contato = this.formulario.value;
-   window.localStorage.setItem("formulario",JSON.stringify(this.contato));
+    //JSON.stringify(this.formulario.value.nome));
+   
+   localStorage.setItem("nome",JSON.stringify(this.formulario.value.nome));
+   localStorage.setItem("telefone",JSON.stringify(this.formulario.value.telefone));
+   localStorage.setItem("desc",JSON.stringify(this.formulario.value.desc));
 }
   
 }

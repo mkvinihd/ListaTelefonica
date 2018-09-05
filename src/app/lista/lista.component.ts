@@ -8,7 +8,9 @@ import {MatTableDataSource} from '@angular/material';
 })
 export class ListaComponent implements OnInit {
 
-  contatos: string[] = [localStorage.getItem("formulario")];
+  nome: string[] = [JSON.parse(localStorage.getItem("nome"))];
+  telefone: string[] = [JSON.parse(localStorage.getItem("telefone"))];
+  desc: string[] = [JSON.parse(localStorage.getItem("desc"))];
   
   constructor() { 
 	    
