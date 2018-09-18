@@ -1,9 +1,9 @@
 <h5>Contatos</h5>
 
 <ul>
-  <li>
-  Nome: {{nome}}<br>
-  Telefone: {{telefone}}<br>
-  Descrição: {{desc}}<br>
+<li *ngFor="let formContatos of formContato">
+  Nome: {{formContatos.nome}}<br>
+  Telefone: {{formContatos.telefone}}<br>
+  Descrição: {{formContatos.desc}}<br>
   </li>
 </ul>
