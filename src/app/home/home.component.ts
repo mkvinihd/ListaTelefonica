@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   onSubmit(){
     //JSON.stringify(this.formulario.value.nome));
    
-   localStorage.setItem('formContato',JSON.stringify(this.formulario.value.nome));
+   localStorage.setItem('formContato',JSON.stringify(this.formulario.value));
 }
   
 }
