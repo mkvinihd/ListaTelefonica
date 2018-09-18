@@ -8,12 +8,10 @@ import {MatTableDataSource} from '@angular/material';
 })
 export class ListaComponent implements OnInit {
 
-  nome: string[] = [JSON.parse(localStorage.getItem("nome"))];
-  telefone: string[] = [JSON.parse(localStorage.getItem("telefone"))];
-  desc: string[] = [JSON.parse(localStorage.getItem("desc"))];
+  formContato: any;
   
   constructor() { 
-	    
+	    this.formContato = JSON.parse(localStorage.getItem('formContato'));
   }
 
   ngOnInit() {
@@ -21,6 +19,3 @@ export class ListaComponent implements OnInit {
   }
 
 }
-// var form = localStorage.getItem("formulario");
-// form = JSON.parse(form);
-// console.log(form);
