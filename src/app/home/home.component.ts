@@ -19,18 +19,16 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
 
   	this.formulario = this.formBuilder.group({
-  		nome: [null],
-  		telefone: [null],
-		  desc: [null]  		
+  		nome: [''],
+  		telefone: [''],
+		  desc: ['']  		
   	})
   }
 
   onSubmit(){
     //JSON.stringify(this.formulario.value.nome));
    
-   localStorage.setItem("nome",JSON.stringify(this.formulario.value.nome));
-   localStorage.setItem("telefone",JSON.stringify(this.formulario.value.telefone));
-   localStorage.setItem("desc",JSON.stringify(this.formulario.value.desc));
+   localStorage.setItem('formContato',JSON.stringify(this.formulario.value.nome));
 }
   
 }
